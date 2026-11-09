@@ -1004,5 +1004,5 @@ else
     esac
 fi
 
-# Exits with a success status.
+# Ends with a success status.
 exit 0
