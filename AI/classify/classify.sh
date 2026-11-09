@@ -976,7 +976,7 @@ if [[ "${ROW_MODE:-false}" == "true" ]]; then
     }
 
 else
-    # --- JSON OBJECT/ARRAY EXECUTION ---
+    # --- Processing of an object or an array of objects JSON ---
     # Read the entire file and determine if it's a single object or an array.
     RAW_DATA=$(tail -n +1 "$STATE_FILE")
 
