@@ -1,0 +1,48 @@
+{
+  "defective_product": {
+    "type": "choice",
+    "instructions": "Does the customer report a defect that compromises the normal or safe use of the product?",
+    "criteria": {
+      "true": "The customer reports a defect that compromises use or safety.",
+      "false": "The customer does not report a defect that compromises use or safety."
+    }
+  },
+  "category": {
+    "type": "choice",
+    "instructions": "What is the main category of the inquiry?",
+    "criteria": {
+      "defective_product": "The product is broken or defective.",
+      "return_exchange": "The customer wants to return or exchange a product that is not described as defective.",
+      "information": "The customer is requesting general information.",
+      "none": "None of the above."
+    }
+  },
+  "proposed_solution": {
+    "type": "choice",
+    "instructions": "What is the most appropriate next step based on the available information?",
+    "criteria": {
+      "request_evidence": "Request photos of the defect and proof of purchase, then evaluate the case.",
+      "offer_replacement": "Directly offer a replacement without further verification.",
+      "reject": "Reject the request."
+    }
+  },
+  "urgency": {
+    "type": "score",
+    "instructions": "How urgent is it to handle the request, considering that the defect makes the product unsafe to use?",
+    "criteria": [
+      "Low: The product is usable and there's no rush.",
+      "Medium: The product is usable with some inconvenience.",
+      "High: The product should not be used until the issue is resolved."
+    ]
+  },
+  "desired_action": {
+    "type": "choice",
+    "instructions": "What is the customer's desired action?",
+    "criteria": {
+      "replacement": "The customer wants a replacement.",
+      "refund": "The customer wants a refund.",
+      "repair": "The customer wants the product to be repaired.",
+      "other": "The customer has not specified a preference."
+    }
+  }
+}
